@@ -12,7 +12,12 @@
 #include "EvenThreadFunction.hpp"
 #include "OddThreadFunction.hpp"
 
+
+
 int main() {
+
+  char c = 'a';
+  int i = c; // Implicit conversion from char to int
   std::cout << "" << std::endl;
   MultiThread::Variable::i = 0;
   MultiThread::Variable::MaxNo = 0;
