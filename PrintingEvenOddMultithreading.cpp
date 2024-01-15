@@ -12,12 +12,15 @@
 #include "EvenThreadFunction.hpp"
 #include "OddThreadFunction.hpp"
 
-
+void foo(int x) {
+    std::cout << x << std::endl;
+}
 
 int main() {
-
-  char c = 'a';
-  int i = c; // Implicit conversion from char to int
+  
+  
+  unsigned int value = 42;
+  foo(value);  // Potential violation: implicit conversion of 'unsigned int' to 'int'
   std::cout << "" << std::endl;
   MultiThread::Variable::i = 0;
   MultiThread::Variable::MaxNo = 0;
