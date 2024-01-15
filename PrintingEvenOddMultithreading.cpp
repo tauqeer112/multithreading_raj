@@ -16,14 +16,18 @@ void myFunction(...);  // Violates MISRA C++ Rule 5-0-4
 
 int main() {
   
-  
-  int arr[5] = {1, 2, 3, 4, 5};
-  int *ptr = arr;
-  ptr = ptr + 2;  // Violates MISRA C++ Rule 5-0-15
+  int array[5] = {1, 2, 3, 4, 5};
+    
+  for (int i = 0; i <= 5; ++i) {  // Defect: Accessing array out of bounds
+        std::cout << array[i] << std::endl;
+    }
+  // int arr[5] = {1, 2, 3, 4, 5};
+  // int *ptr = arr;
+  // ptr = ptr + 2;  // Violates MISRA C++ Rule 5-0-15
 
 
 
-  int *ptr_dynamic = new int(10);  // Violates MISRA C++ Rule 6-4-5
+  // int *ptr_dynamic = new int(10);  // Violates MISRA C++ Rule 6-4-5
   
 
 
