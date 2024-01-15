@@ -12,15 +12,22 @@
 #include "EvenThreadFunction.hpp"
 #include "OddThreadFunction.hpp"
 
-void foo(int x) {
-    std::cout << x << std::endl;
-}
+void myFunction(...);  // Violates MISRA C++ Rule 5-0-4
 
 int main() {
   
   
-  unsigned int value = 42;
-  foo(value);  // Potential violation: implicit conversion of 'unsigned int' to 'int'
+  int arr[5] = {1, 2, 3, 4, 5};
+  int *ptr = arr;
+  ptr = ptr + 2;  // Violates MISRA C++ Rule 5-0-15
+
+  void *voidPtr = &someObject;
+  int *intPtr = (int *)voidPtr;  // Violates MISRA C++ Rule 5-2-7
+
+  int *ptr = new int(10);  // Violates MISRA C++ Rule 6-4-5
+  
+  int x = condition ? 10 : 20;  // Violates MISRA C++ Rule 15-5-1
+
   std::cout << "" << std::endl;
   MultiThread::Variable::i = 0;
   MultiThread::Variable::MaxNo = 0;
