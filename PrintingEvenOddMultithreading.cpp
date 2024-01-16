@@ -27,9 +27,14 @@ int main() {
     
   int val = *ptr;
 
+  if(false)
+  {
+    std::cout<<"something"<<std::endl;
+  }
 
 
-  // int *ptr_dynamic = new int(10);  // Violates MISRA C++ Rule 6-4-5
+
+  int *ptr_dynamic = new int(10);  // Violates MISRA C++ Rule 6-4-5
   
 
 
