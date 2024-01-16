@@ -6,8 +6,8 @@
 # its creating the executable
  
 #Flags
-#-Werror 
-CXXFLAGS= -Wall -Wextra -std=c++11 -g3 -fmessage-length=0
+#-Werror -Wall -Wextra -std=c++11 -g3 -fmessage-length=0
+CXXFLAGS=  
  
 #Compiler
 CXX= g++
